@@ -1,0 +1,24 @@
+{
+  "name": "motionforge-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @motionforge/server --filter @motionforge/web dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "doctor": "node scripts/doctor.js",
+    "status": "node scripts/status.js",
+    "desktop": "pnpm --filter @motionforge/desktop start"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1",
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "@swc/core"
+    ]
+  }
+}

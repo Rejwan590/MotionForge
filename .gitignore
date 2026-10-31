@@ -1,0 +1,23 @@
+node_modules/
+dist/
+dist-electron/
+.pnpm-store/
+*.log
+.DS_Store
+Thumbs.db
+
+# Vendor builds and node_modules
+vendor/openreel-video/node_modules/
+vendor/openreel-video/*/dist/
+
+# Test output & local media
+test*.mp3
+test*.wav
+*.mp4
+!reference/
+qa/*.png
+!reference/ui-reference.png
+
+# Environment & local credentials
+.env
+.env.local
